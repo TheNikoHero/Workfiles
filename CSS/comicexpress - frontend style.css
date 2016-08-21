@@ -1,0 +1,1158 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24-03-2015, 11:27:01
+    Author     : Nikolaj With Lauritsen
+*/
+*{
+    margin:0;
+    padding:0;
+    font-family:arial, helvetica, sans-serif;
+}
+body{
+
+}
+.clear{
+    clear:both;
+}
+.hidden_headline{
+    display:none;
+}
+#wrapper{
+    min-height:800px;
+}
+header{
+    width:100%;
+    min-height:90px;
+    /*    background:#fcd748 !important;*/
+    background-image:url('../images/pattern.png');
+    border-radius:0px!important;
+    border:none;
+    margin:0!important;
+    padding:0!important;
+}
+header h1{
+    font-size:70px;
+    letter-spacing:7px;
+    color:white;
+    float:left;
+    text-shadow:
+        10px 0px 0 #b71817, 
+        4px 1px 0 #b71817,
+        3px 2px 0 #b71817,
+        3px 3px 0 #b71817,
+        2px 3px 0 #b71817, 
+        1px 4px 0 #b71817,
+        0px 4px 0 #b71817,
+        -1px 4px 0 #b71817, 
+        -2px 3px 0 #b71817, 
+        -3px 3px 0 #b71817, 
+        -3px 2px 0 #b71817, 
+        -4px 1px 0 #b71817, 
+        -4px 0px 0 #b71817, 
+        -4px -1px 0 #b71817, 
+        -3px -2px 0 #b71817,
+        -3px -3px 0 #b71817, 
+        -2px -3px 0 #b71817, 
+        -1px -4px 0 #b71817,
+        0px -4px 0 #b71817,
+        1px -4px 0 #b71817,
+        2px -3px 0 #b71817,
+        3px -3px 0 #b71817, 
+        3px -2px 0 #b71817, 
+        4px -1px 0 #b71817
+}
+header h1 a{
+    color:white;
+    text-decoration:none;
+    font-family: 'Fugaz One', cursive;
+    font-weight:900;
+    letter-spacing: 11px;
+}
+#headerContainer{
+    width:90%; 
+    margin:0 auto;
+    height:auto;
+}
+.mobile_menu_navi_container{
+    display:none;
+}
+#numberSearchGet{
+    font-weight:bold;
+    font-size:21px;
+    color: #3c3b39;
+    font-style:italic;
+}
+#numberSearchGet span{
+    color:black;
+    font-style:normal;
+    text-decoration:underline;
+}
+nav{
+    /*    border-top:4px solid #efc420!important;*/
+    /*    background: rgba(57,58,58,1)!important;
+        background: -moz-linear-gradient(top, rgba(57,58,58,1) 0%, rgba(89,93,93,1) 100%)!important;
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(57,58,58,1)), color-stop(100%, rgba(89,93,93,1)))!important;
+        background: -webkit-linear-gradient(top, rgba(57,58,58,1) 0%, rgba(89,93,93,1) 100%)!important;
+        background: -o-linear-gradient(top, rgba(57,58,58,1) 0%, rgba(89,93,93,1) 100%)!important;
+        background: -ms-linear-gradient(top, rgba(57,58,58,1) 0%, rgba(89,93,93,1) 100%)!important;
+        background: linear-gradient(to bottom, rgba(57,58,58,1) 0%, rgba(89,93,93,1) 100%)!important;
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#393a3a', endColorstr='#595d5d', GradientType=0 )!important;*/
+    background-color:#3d3d3d;
+    border-bottom:4px solid #b71817;
+    height:35px;
+    text-align:center;
+    margin:0 auto;
+}
+
+nav li{
+    display:inline-block;
+    height:35px;
+    text-align:center;
+    padding:0px 7px;
+    float:left;
+
+}
+nav li a{
+    color:white;
+    font-weight:700;
+    text-decoration:none;
+    display:inline-block;
+    height:35px;
+    width:150px;
+    padding-top:5px;
+    font-size:22px;
+}
+
+nav li a:hover{ 
+    text-decoration:none;
+    color:white;
+}
+nav li:hover{
+    background-color:#b71817;
+    text-decoration:none;
+    color:white;
+}
+nav li.active{
+        background-color:#b71817;
+}
+
+#mobile_menu_button{
+    display:none;
+}
+#normal_menu #menuContainer{
+    width:70%;
+    margin:0 auto;
+}
+#normal_menu ul{
+    text-align:left;
+}
+footer .content{
+    width:90%;
+    margin:0 auto;
+    padding-bottom:20px;
+}
+header .content{
+    width:90%;
+    margin:0 auto 20px auto;
+}
+
+#searchForm{
+    width:540px!important;
+    float:right;
+    margin-top:30px;
+}
+#searchForm div{
+    display:inline-block;
+}
+#searcher{
+    width:430px;
+    background-color:#dcdcdc;
+}
+#searchForm input{
+    /*    border-radius:4px!important;*/
+    background-color:#dcdcdc;
+    font-weight:700;
+    font-style:italic;
+    height:27px;
+    border:none;
+}
+#searchForm input[type=text]{
+    padding:3px 11px;
+}
+#searchForm input[type=submit]{
+    padding:7px 11px;
+    height:34px;
+    margin-left:10px;
+    background-color:#b71817;
+    color:white;
+    font-style:normal;
+}
+
+/* ////============ rules for all CONTENT IN OR THE #WRAPPER content begins here ============////*/
+
+#wrapper{
+    width:80%;
+    margin:40px auto 0 auto;
+}
+#wrapper h1{
+    color:#3c3b39;
+}
+#wrapper h2{
+    font-size:30px;
+    color:darkgray;
+    margin-bottom:40px;
+}
+#wrapper .topComicPosts{
+    width:30%;
+    float:right;
+    min-height:20px;
+}
+.topComicPosts .topImgBox{
+    position:relative;
+    min-height:368px;
+    max-height:368px;
+    min-width:232px;
+    max-width:232px;
+    margin-bottom:40px;
+    border:4px solid lightgray;
+    transition: .4s ease-out
+}
+.topComicPosts .topImgBox:hover{
+    transition:.4s;
+    border:4px solid #b71817;
+}
+
+.topComicPosts .topImgBox img{
+    min-height:368px;
+    max-height:368px;
+    
+    min-width:232px;
+    max-width:232px;
+}
+
+.topImgBox h3{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:40px;
+    padding-top:10px;
+    padding-bottom:10px;
+    background-color:rgba(184, 24, 23, .9);
+    font-style:italic;
+    font-size:17px;
+    text-align:center;
+    color:white;
+}
+
+/********************************************************
+
+ALL THINGS THAT HAS TO DO WITH THE TEXT POSTS IS HER
+
+*********************************************************/
+
+.textPost{
+    border-bottom: 2px solid #beb9bd;
+    margin-bottom:20px;
+    transition:.4s;
+}
+.textPost .textPostTitle{
+    padding:7px;
+    border-bottom:2px solid black;
+    text-align:center;
+    color: #3c3b39;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom:20px;
+}
+.textPost .textPostDescription{
+    padding:7px;
+    width:100%;
+    margin-bottom:20px;
+}
+.textPost:hover{
+    background-color:whitesmoke;
+    transition:.4s;
+}
+/********************************************************
+
+TEXT POST STYLING END
+
+*********************************************************/
+#wrapper .newComicsPosts{
+    width:50%;
+    min-height:20px;
+}
+.comicBox:hover{
+    transition:.4s;
+    background-color:#f0f0f0;
+}
+#wrapper .comicBox{
+    width:100%;
+    margin:40px 0;
+    border-bottom: 2px solid #beb9bd;
+}
+.comicBox .imageBox{
+    float:left;
+    min-width:280px;
+    min-height:156px;
+    max-width:280px;
+    margin-right:11px;
+}
+.comicBox .imageBox img{
+    border:4px solid lightgray;
+    transition:.4s;
+}
+.comicBox .imageBox img:hover{
+    border:4px solid #b71817;
+    transition:.4s;
+}
+.comicBox{
+    float:left;
+}
+.comicBox .titleComic{
+    color:#3c3b39;
+    font-size:24px;
+    font-style:italic;
+    font-weight:bold;
+    border-bottom:1px solid #8a8b8d;
+    width:100%;
+}
+.comicBox .textForComic p{
+
+}
+.authorForPost{
+    font-size:14px;
+    font-style:italic;
+    margin:11px 0px 11px 0;
+    color:gray;
+}
+
+.readmore{
+    width:120px;
+    background-color:#b71817;
+    height:20px;
+    float:right;
+    text-align:center;
+    padding:12px;
+    margin-bottom:7px;
+    color:white;
+    font-size:19px;
+    transition: all .1s ease-in-out
+}
+.readmore:hover{
+    background-color:#e7403f;
+    color:white;
+    transition:.2s;
+}
+
+/* ////============ rules for all COMICS PAGE content begins here ============////*/
+
+.comicPage_allComics{
+    
+    margin:0 auto;
+    text-align:center;
+}
+
+.comicBox_comicspage{
+    background-color:whitesmoke;
+    width:30%;
+    display:inline-block;
+    margin:0px auto 40px auto;
+    text-align:center;
+}
+.comicBox_comicspage p{
+    padding:20px;
+    line-height:21px;
+    min-height:82px;
+    max-height:82px;
+    text-align:left;
+}
+.comicBox_comicspage img{
+    text-align:center;
+    margin:10px 0;
+    min-height:544px;
+    max-height:544px;
+    max-width:90%;
+}
+.titleForComicBox{
+        text-align:center;
+    font-size:17px;
+    background-color:#b71817;
+    padding:7px 11px;
+    color:white;
+}
+
+
+
+/* ////============ rules for all DETAILS PAGE content begins here ============////*/
+
+
+.boxForDetailed{
+    background-color:whitesmoke;
+    width:780px;
+    margin:0px auto 40px auto;
+    text-align:center;
+}
+.boxForDetailed p{
+    padding:20px;
+    line-height:21px;
+    text-align:left;
+}
+.boxForDetailed img{
+    text-align:center;
+    margin:10px 0;
+
+    max-width:90%;
+}
+.titleForSelected{
+    text-align:center;
+    font-size:22px;
+    background-color:#b71817;
+    padding:7px 11px;
+    color:white;
+}
+.author_date_selected{
+    padding:4px 11px;
+    font-style:italic;
+    font-weight:600;
+    color:gray;
+    opacity:.7;
+}
+.bookButton{
+    width: 120px;
+    background-color: #b71817;
+    text-align: center;
+    padding: 12px;
+    margin-bottom: 7px;
+    color: white;
+    font-size: 19px;
+    border:none;
+    transition: all .1s ease-in-out
+}
+.bookButton:hover{
+    transition:.1s;
+    background-color:#e7403f;
+    cursor:pointer;
+}
+.author_date_selected p:first-of-type{
+    float:left;
+}
+.author_date_selected p:nth-of-type(2){
+    float:right;
+}
+
+.preview_section{
+    text-align:left;
+}
+.preview_section a{
+    color:gray;
+    text-decoration: none;
+        display:inline-block;
+}
+.preview_section img{
+    max-width:50px !important;
+}
+
+/* ////============ rules for all BOOKING content begins here ============////*/
+.about_to_book{
+    width:120%;
+}
+.about_to_book div:first-of-type{
+    display:block;
+    float:right;
+    text-align:left;
+    width:50%;
+    margin-right:4px;
+    font-size:18px;
+}
+.about_to_book div p:first-of-type{
+    background-color:lightgray;
+    margin-bottom:11px;
+}
+.about_to_book div p:nth-of-type(3){
+    color:gray;
+    font-family: 'Open Sans', sans-serif;
+    font-style:italic;
+    margin-top:11px;
+    font-size:15px;
+}
+
+.order_status{
+    width:70%;
+    margin:0 auto;
+    text-align:center;
+}
+.order_status p{
+    margin-bottom:10px;
+
+}
+
+.heavy_text{
+    font-weight:600;
+}
+.italic_text{
+    font-style:italic;
+}
+
+/* ////============ rules for all LOGIN content begins here ============////*/
+
+#loginForm{
+    width:417px;
+    margin:40px auto;
+}
+#loginForm div{
+    margin-top:17px;
+}
+#loginForm div label{
+    display:inline-block;
+    width:200px;
+    font-size:20px;
+}
+#loginForm div input{
+    width:200px;
+    padding:4px 4px;
+}
+#loginForm input[type=submit]{
+    padding:7px 18px;
+    height:34px;
+    background-color:#b71817;
+    color:white;
+    font-style:normal;
+    border:none;
+    border-radius:4px;
+    float:right;
+    margin-top:12px;
+    cursor:pointer;
+     transition: all .1s ease-in-out
+}
+#loginForm input[type=submit]:hover{
+    background-color:#e7403f;
+    
+}
+
+
+/* ////============ rules for all ABOUT.PHP content begins here ============////*/
+.content_wrapper img{
+    max-height:300px;
+    max-width:300px;
+}
+
+
+/* ////============ rules for all REVIEWS.PHP content begins here ============////*/
+
+.writeReviewBox{
+    width:700px;
+    margin:0 auto 40px auto;
+    min-height:400px;
+
+}
+.writeReviewBox #contact_message{
+    text-align:center;
+    font-weight:bold;
+    margin-bottom:10px;
+    padding-bottom:10px;
+}
+.nameScoreBox{
+
+}
+.writeReviewBox .nameScoreBox div{
+    margin: 0 auto; 
+
+    max-width:400px;
+    margin-bottom:11px;
+    font-weight:bold;
+}
+.writeReviewBox .nameScoreBox div label{
+    width:100px;
+    display:inline-block;
+}
+.writeReviewBox .nameScoreBox div input{
+    padding:4px 7px;
+    width:180px;
+    background-color:#F4F2F2;
+    border:1px solid #F4F2F2;
+    margin-right:7px;
+}
+
+.writeReviewBox .nameScoreBox div:nth-of-type(5){
+    max-width:600px;
+}
+.writeReviewBox .nameScoreBox div:nth-of-type(5) label{
+    display:block;
+    width:100%;
+    text-align:left;
+    margin-bottom:10px;
+}
+.writeReviewBox .nameScoreBox div:nth-of-type(4) textarea{
+    width:100%;
+    height:200px;
+    background-color:#F4F2F2;
+    border:1px solid #F4F2F2;
+    max-width:600px;
+    max-height:700px;
+    padding:4px 7px;
+
+}
+.writeReviewBox .nameScoreBox textarea{
+    width:100%;
+    height:200px;
+    background-color:#F4F2F2;
+    border:1px solid #F4F2F2;
+    max-width:600px;
+    max-height:700px;
+    padding:4px 7px;
+}
+.writeReviewBox .nameScoreBox div:nth-of-type(5){
+    max-width:600px;
+    text-align:right;
+    margin:0;
+}
+.writeReviewBox .nameScoreBox input[type=submit]{
+    padding: 7px 11px;
+    height: 34px;
+    margin:0;
+    background-color: #b71817;
+    border:none;
+    color: white;
+    font-style: normal;
+    width:100px;
+}
+
+
+.review{
+    width:100%;
+    background-color:white;
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(50, 50, 50, 0.26);
+    -moz-box-shadow:    0px 0px 5px 2px rgba(50, 50, 50, 0.26);
+    box-shadow:         0px 0px 5px 2px rgba(50, 50, 50, 0.26);
+    margin-top:20px;
+    padding:10px 17px;
+}
+.review div:first-of-type{
+    text-align:center;
+}
+.review div h2{
+    display:inline-block;
+    margin-right:20px;
+    font-size:18px!important;
+}
+
+.stars{
+    display:inline-block;
+}
+.reviewRate{
+    max-width:30px;
+    max-height:30px;
+    margin-left:4px;
+}
+/* ////============ rules for all footer & footer content begins here ============////*/
+footer{
+    width:100%;
+    min-height:180px;
+    background:#3d3d3d!important;
+    padding-bottom:20px;
+}
+
+.list{
+    margin-left:20px;
+    color:white;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.footerMenu{
+    list-style:none;
+}
+.footerMenu li{
+    margin-top:3px;
+}
+.footerMenu li a{
+    color:white;
+    text-decoration:none;
+    font-weight:300;
+    display:block;
+}
+.footerMenu li a.active{
+    color:#D48E6A;
+}
+.footer_list:first-of-type{
+    float:left;
+}
+.footer_list{
+    margin-top:10px;
+    margin-right:10px;
+    width:400px;
+    display:inline-block;
+    color:white;
+}
+.footer_list:nth-of-type(2){
+    margin-right:80px;
+    float:left;
+}
+.footer_list:last-of-type{
+    float:right;
+    width:110px;
+}
+.footer_list img{
+    max-width:20px;
+    max-height:20px;
+    margin-right:7px;
+    padding-top:4px;
+}
+.footer_list h3{
+    border-bottom:1px solid white;
+}
+
+
+/* ////============ responsive rules begins here ============////*/
+
+@media (max-width: 1500px) {
+    
+    .textPost{
+        width:70% !important;
+    }
+    
+    .comicBox{
+        width:70% !important;
+    }
+
+    .footer_list{
+        width:320px;
+    }
+    .footer_list:first-of-type{
+        width:300px;
+    }
+
+
+    #wrapper .newComicsPosts{
+        width:80%;
+    }
+    .comicBox .titleComic {
+        width:100%;
+        float:none;
+        font-size:15px;
+    }
+}
+
+/*SPECIAL MADE FOR THE HEADER*/
+@media (max-width: 1444px){
+ 
+    header{
+        text-align:center;
+    }
+    
+    #searchForm{
+        float:none;
+        margin-top:0px;
+        margin:0 auto 20px auto !important;
+    }
+    
+    header h1{
+        float:none;
+    }    
+}
+/*SPECIAL MADE FOR THE HEADER END*/
+
+@media (max-width:1300px){
+    .footer_list:first-of-type{
+        width:210px;
+    }
+
+    .footer_list{
+        width:270px;
+        font-size:15px;
+    }
+}
+
+/*SPECIAL MADE FOR THE NORMAL-MENU*/
+@media (max-width: 1190px){
+    nav li a{
+        width:120px !important;
+    }    
+    
+}
+/*SPECIAL MADE FOR THE NORMAL-MENU END*/
+
+
+@media (max-width:1120px){
+
+
+    .footer_list{
+        width:200px;
+    }
+    .comicBox .imageBox{
+        float:none;
+    }
+    .comicBox .titleComic {
+        width:100%;
+        float:none;
+        font-size:20px;
+    }
+}
+@media (max-width: 1020px){
+    
+    .footer_list:first-of-type{
+        float:none;
+        margin: 0 auto;
+    }
+    .footer_list:nth-of-type(2){
+        float:none !important;
+        margin:10px auto 10px auto !important;
+        width:210px !important;
+    }
+    .footer_list:nth-of-type(3){
+        float:none !important;
+        margin:10px auto 10px auto !important;
+        width:210px !important;
+    }
+    
+    .footer_list:nth-of-type(4){
+        float:none !important;
+        margin:10px auto 0px auto !important;
+        padding-bottom:10px;
+        width:210px !important;
+    }
+    .footer_list:nth-of-type(4) .footerMenu li a{
+        display:block;
+        margin-top:7px;
+        font-size:17px;
+    }
+    
+    .footer_list:first-of-type .footerMenu{
+        height:70px;
+        -webkit-columns: 70px 3; /* Chrome, Safari, Opera */
+        -moz-columns: 70px 3; /* Firefox */
+        columns: 70px 3;
+    }
+    .footer_list h3{
+
+        font-size:21px;
+        border-bottom:1px solid gray;
+    }
+
+    .footer_list{
+        float:none;
+    }
+    .footer_list:last-of-type{
+        float:none;
+    }
+    
+    
+    
+    
+}
+
+@media (max-width:980px) {
+    
+    .comicBox_comicspage{
+        margin: 40px 20px 40px 20px;
+        width: 40%;
+    }
+    .comicBox_comicspage img{
+        min-height:auto;
+        max-height:auto;
+        
+    }
+    
+    
+    .review div:first-of-type{
+        margin-bottom:10px !important;
+    }
+    .review div h2{
+        margin: 7px !important;
+    }
+    
+    .writeReviewBox{
+            width:auto !important;
+    margin:20px 0 10px 0!important;
+   
+    }
+    .boxForDetailed{
+        width:100%;
+        margin-top:20px;
+    }
+    #wrapper{
+        margin:0px auto;
+    }
+    .footer_list{
+        width:100%;
+        display:block;
+    }
+    .footer_list:nth-of-type(2){
+        float:none;
+    }
+
+    header h1{
+        font-size:50px;
+    }
+    #normal_menu{
+        display:none;
+    }
+    .mobile_menu_navi_container{
+        display:block;
+    }
+    #wrapper .comicBox{
+        margin-bottom:40px;
+    }
+    
+    .textPost{
+        width:100% !important;
+    }
+    
+    .comicBox{
+        width:100% !important;
+    }
+    
+    .newComicsPosts{
+        margin-top:74px;
+        float:left !important;
+    }
+    .topComicPosts{
+        display:none;
+    }
+    .mobile_menu_navi_container li{
+
+        font-size:17px;
+        width:100px;
+        height:auto;
+        padding:4px 7px;
+    }
+    .mobile_menu_navi_container li a{
+        color:white;
+        font-weight:100;
+        text-decoration:none;
+        display:inline-block;
+        height:40px;
+        width:90% !important;
+        height:27px;
+        padding-top:5px;
+    }
+    .mobile_menu_navi_container .active{
+      
+    }
+    .mobile_menu_navi_container li a:hover{
+        background-color:#b71817;
+        text-decoration:none;
+        color:white;
+    }
+    .mobile_menu_navi_container li:hover{
+        background-color:#b71817;
+        text-decoration:none;
+        color:white;
+    }
+
+    /*RESPONSIVE DESIGN FOR THE HEADER*/
+    #searchForm{
+        margin:0 auto !important;
+        margin-left:20px;
+    }
+    header h1 a{
+        font-size:34px;
+    }
+    header h1{
+        text-shadow:5px 0px 0 #b71817,
+            2px 4px 0 #b71817, 
+            1px 4px 0 #b71817, 
+            1px 4px 0 #b71817, 
+            1px 4px 0 #b71817, 
+            1px 4px 0 #b71817,
+            0px 2px 0 #b71817, 
+            -1px 2px 0 #b71817, 
+            -1px 1px 0 #b71817,
+            -1px 1px 0 #b71817,
+            -1px 1px 0 #b71817, 
+            -1px 1px 0 #b71817, 
+            -1px 0px 0 #b71817,
+            -1px -1px 0 #b71817, 
+            -1px -0px 0 #b71817,
+            -1px -0px 0 #b71817,
+            -1px -0px 0 #b71817, 
+            -1px -0px 0 #b71817,
+            0px -2px 0 #b71817,
+            1px -2px 0 #b71817,
+            1px -1px 0 #b71817, 
+            1px -1px 0 #b71817, 
+            1px -1px 0 #b71817,
+            1px -1px 0 #b71817
+    }
+
+    /*RESPONSIVE DESIGN FOR THE MENU*/
+    .mobile_menu_navi_container{
+
+    }
+    nav li{
+        width:20px;
+    }
+    nav li a{
+        float:none;
+        padding:0 !important;
+        font-size:17px !important;
+    }
+
+    /*RESPONSIVE DESIGN FOR NEWEST AND TOP POSTS*/
+    #wrapper .newComicsPosts{
+        width:100% !important;
+
+    }
+    #wrapper .topComicPosts{
+        width:100% !important;
+
+    }
+    #wrapper .topComicPosts div:first-of-type{
+        margin-top:100px;
+    }
+}
+
+@media (max-width:615px){
+        .comicBox_comicspage{
+        margin: 40px 20px 40px 20px;
+        width: 100%;
+    }
+    
+    #searchForm{
+        width:100%!important;
+    }
+    header h1 a{
+        font-size:44px;
+    }
+    
+    .mobile_menu_navi_container{
+        padding:0px 0px !important;
+    }
+    .mobile_menu_navi_container li{
+        padding:4px 0px !important;
+    }
+    #searchForm input[type=submit]{
+        display:none !important;
+    }
+    
+}
+
+@media(max-width:568px){
+    nav{
+        height:auto;
+    }
+    #mobile_menu_button{
+      display:block; 
+      margin-top:10px;
+      cursor:pointer;
+      background-color:#b71817;
+      color:white;
+      padding:4px;
+    }
+    .mobile_menu_navi_container{
+        display:none;
+    }
+
+    .mobile_menu_navi_container li{
+        font-size:17px;
+        float:none !important;
+        display:block !important;
+        background-color:#3d3d3d;
+        width:100%
+    }
+    .mobile_menu_navi_container li a{
+        /*        color:white;
+                font-weight:100;
+                text-decoration:none;
+                
+                height:40px;
+                width:70px;
+                height:27px;
+                padding-top:5px;*/
+      
+    }
+    #mobile_menu_navi_container{
+        display:none;
+    }
+    .about_to_book{
+        width:95%;  
+    }
+    #loginForm input[type=submit]{
+        float:none;
+    }
+    #loginForm div label{
+        display:block;
+    }
+    .about_to_book div:first-of-type{
+        float:none;
+    }
+
+    header h1 a{
+        font-size:44px;
+    }
+
+    header h1{
+        text-shadow:2px 0px 0 #b71817,
+            2px 4px 0 #b71817, 
+            1px 4px 0 #b71817, 
+            1px 4px 0 #b71817, 
+            1px 4px 0 #b71817, 
+            1px 4px 0 #b71817,
+            0px 2px 0 #b71817, 
+            -1px 2px 0 #b71817, 
+            -1px 1px 0 #b71817,
+            -1px 1px 0 #b71817,
+            -1px 1px 0 #b71817, 
+            -1px 1px 0 #b71817, 
+            -1px 0px 0 #b71817,
+            -1px -1px 0 #b71817, 
+            -1px -0px 0 #b71817,
+            -1px -0px 0 #b71817,
+            -1px -0px 0 #b71817, 
+            -1px -0px 0 #b71817,
+            0px -2px 0 #b71817,
+            1px -2px 0 #b71817,
+            1px -1px 0 #b71817, 
+            1px -1px 0 #b71817, 
+            1px -1px 0 #b71817,
+            1px -1px 0 #b71817;
+        float:none !important;
+
+    }
+    #searchForm{
+        width:100% !important;
+    }
+    #searchForm input[type=text]{
+
+
+        border-radius:0%;
+        /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+        -webkit-border-radius: 0%; 
+
+        /* Firefox 1-3.6 */
+        -moz-border-radius: 0%; 
+
+        /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+        border-radius: 0%; 
+
+    }
+
+    #searchForm input[type=submit]{
+        display:none;
+    }
+
+
+}
+
+
+@media (max-width:510px){
+    #searchForm div{
+        display:block;
+    }
+    #searchForm input[type=text]{
+        width:100%;
+    }
+    header h1 a{
+        font-size:27px;
+    }
+}
+
+@media(max-width:320px){
+
+
+}
